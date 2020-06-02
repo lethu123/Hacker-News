@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="reference" name="backgroundCompat"/>
+    <attr format="boolean" name="isInScrollContainer"/>
+    <color name="black">@android:color/black</color>
+    <color name="material_amber_050">#FFF8E1</color>
+    <color name="material_amber_100">#FFECB3</color>
+    <color name="material_amber_200">#FFE082</color>
+    <color name="material_amber_300">#FFD54F</color>
+    <color name="material_amber_400">#FFCA28</color>
+    <color name="material_amber_500">#FFC107</color>
+    <color name="material_amber_600">#FFB300</color>
+    <color name="material_amber_700">#FFA000</color>
+    <color name="material_amber_800">#FF8F00</color>
+    <color name="material_amber_900">#FF6F00</color>
+    <color name="material_amber_A100">#FFE57F</color>
+    <color name="material_amber_A200">#FFD740</color>
+    <color name="material_amber_A400">#FFC400</color>
+    <color name="material_amber_A700">#FFAB00</color>
+    <color name="material_amber_translucent">#80FFAB00</color>
+    <color name="material_blue_050">#E3F2FD</color>
+    <color name="material_blue_100">#BBDEFB</color>
+    <color name="material_blue_200">#90CAF9</color>
+    <color name="material_blue_300">#64B5F6</color>
+    <color name="material_blue_400">#42A5F5</color>
+    <color name="material_blue_500">#2196F3</color>
+    <color name="material_blue_600">#1E88E5</color>
+    <color name="material_blue_700">#1976D2</color>
+    <color name="material_blue_800">#1565C0</color>
+    <color name="material_blue_900">#0D47A1</color>
+    <color name="material_blue_A100">#82B1FF</color>
+    <color name="material_blue_A200">#448AFF</color>
+    <color name="material_blue_A400">#2979FF</color>
+    <color name="material_blue_A700">#2962FF</color>
+    <color name="material_blue_gray_050">#ECEFF1</color>
+    <color name="material_blue_gray_100">#CFD8DC</color>
+    <color name="material_blue_gray_200">#B0BEC5</color>
+    <color name="material_blue_gray_300">#90A4AE</color>
+    <color name="material_blue_gray_400">#78909C</color>
+    <color name="material_blue_gray_500">#607D8B</color>
+    <color name="material_blue_gray_600">#546E7A</color>
+    <color name="material_blue_gray_700">#455A64</color>
+    <color name="material_blue_gray_800">#37474F</color>
+    <color name="material_blue_gray_900">#263238</color>
+    <color name="material_blue_gray_A100">#90A4AE</color>
+    <color name="material_blue_gray_A200">#78909C</color>
+    <color name="material_blue_gray_A400">#607D8B</color>
+    <color name="material_blue_gray_A700">#546E7A</color>
+    <color name="material_blue_gray_translucent">#80546E7A</color>
+    <color name="material_blue_translucent">#802962FF</color>
+    <color name="material_brown_050">#EFEBE9</color>
+    <color name="material_brown_100">#D7CCC8</color>
+    <color name="material_brown_200">#BCAAA4</color>
+    <color name="material_brown_300">#A1887F</color>
+    <color name="material_brown_400">#8D6E63</color>
+    <color name="material_brown_500">#795548</color>
+    <color name="material_brown_600">#6D4C41</color>
+    <color name="material_brown_700">#5D4037</color>
+    <color name="material_brown_800">#4E342E</color>
+    <color name="material_brown_900">#3E2723</color>
+    <color name="material_brown_A100">#FFA68E</color>
+    <color name="material_brown_A200">#FF7E5B</color>
+    <color name="material_brown_A400">#FF5628</color>
+    <color name="material_brown_A700">#FF420E</color>
+    <color name="material_brown_translucent">#80FF420E</color>
+    <color name="material_cyan_050">#E0F7FA</color>
+    <color name="material_cyan_100">#B2EBF2</color>
+    <color name="material_cyan_200">#80DEEA</color>
+    <color name="material_cyan_300">#4DD0E1</color>
+    <color name="material_cyan_400">#26C6DA</color>
+    <color name="material_cyan_500">#00BCD4</color>
+    <color name="material_cyan_600">#00ACC1</color>
+    <color name="material_cyan_700">#0097A7</color>
+    <color name="material_cyan_800">#00838F</color>
+    <color name="material_cyan_900">#006064</color>
+    <color name="material_cyan_A100">#84FFFF</color>
+    <color name="material_cyan_A200">#18FFFF</color>
+    <color name="material_cyan_A400">#00E5FF</color>
+    <color name="material_cyan_A700">#00B8D4</color>
+    <color name="material_cyan_translucent">#8000B8D4</color>
+    <color name="material_deep_orange_050">#FBE9E7</color>
+    <color name="material_deep_orange_100">#FFCCBC</color>
+    <color name="material_deep_orange_200">#FFAB91</color>
+    <color name="material_deep_orange_300">#FF8A65</color>
+    <color name="material_deep_orange_400">#FF7043</color>
+    <color name="material_deep_orange_500">#FF5722</color>
+    <color name="material_deep_orange_600">#F4511E</color>
+    <color name="material_deep_orange_700">#E64A19</color>
+    <color name="material_deep_orange_800">#D84315</color>
+    <color name="material_deep_orange_900">#BF360C</color>
+    <color name="material_deep_orange_A100">#FF9E80</color>
+    <color name="material_deep_orange_A200">#FF6E40</color>
+    <color name="material_deep_orange_A400">#FF3D00</color>
+    <color name="material_deep_orange_A700">#DD2C00</color>
+    <color name="material_deep_purple_050">#EDE7F6</color>
+    <color name="material_deep_purple_100">#D1C4E9</color>
+    <color name="material_deep_purple_200">#B39DDB</color>
+    <color name="material_deep_purple_300">#9575CD</color>
+    <color name="material_deep_purple_400">#7E57C2</color>
+    <color name="material_deep_purple_500">#673AB7</color>
+    <color name="material_deep_purple_600">#5E35B1</color>
+    <color name="material_deep_purple_700">#512DA8</color>
+    <color name="material_deep_purple_800">#4527A0</color>
+    <color name="material_deep_purple_900">#311B92</color>
+    <color name="material_deep_purple_A100">#B388FF</color>
+    <color name="material_deep_purple_A200">#7C4DFF</color>
+    <color name="material_deep_purple_A400">#651FFF</color>
+    <color name="material_deep_purple_A700">#6200EA</color>
+    <color name="material_deep_purple_translucent">#806200EA</color>
+    <color name="material_deep_translucent">#80DD2C00</color>
+    <color name="material_gray_050">#FAFAFA</color>
+    <color name="material_gray_100">#F5F5F5</color>
+    <color name="material_gray_200">#EEEEEE</color>
+    <color name="material_gray_300">#E0E0E0</color>
+    <color name="material_gray_400">#BDBDBD</color>
+    <color name="material_gray_500">#9E9E9E</color>
+    <color name="material_gray_600">#757575</color>
+    <color name="material_gray_700">#616161</color>
+    <color name="material_gray_800">#424242</color>
+    <color name="material_gray_900">#212121</color>
+    <color name="material_gray_A100">#FEF3F3</color>
+    <color name="material_gray_A200">#9E9E9E</color>
+    <color name="material_gray_A400">#757575</color>
+    <color name="material_gray_A700">#424242</color>
+    <color name="material_gray_translucent">#80424242</color>
+    <color name="material_green_050">#E8F5E9</color>
+    <color name="material_green_100">#C8E6C9</color>
+    <color name="material_green_200">#A5D6A7</color>
+    <color name="material_green_300">#81C784</color>
+    <color name="material_green_400">#66BB6A</color>
+    <color name="material_green_500">#4CAF50</color>
+    <color name="material_green_600">#43A047</color>
+    <color name="material_green_700">#388E3C</color>
+    <color name="material_green_800">#2E7D32</color>
+    <color name="material_green_900">#1B5E20</color>
+    <color name="material_green_A100">#B9F6CA</color>
+    <color name="material_green_A200">#69F0AE</color>
+    <color name="material_green_A400">#00E676</color>
+    <color name="material_green_A700">#00C853</color>
+    <color name="material_green_translucent">#8000C853</color>
+    <color name="material_indigo_050">#E8EAF6</color>
+    <color name="material_indigo_100">#C5CAE9</color>
+    <color name="material_indigo_200">#9FA8DA</color>
+    <color name="material_indigo_300">#7986CB</color>
+    <color name="material_indigo_400">#5C6BC0</color>
+    <color name="material_indigo_500">#3F51B5</color>
+    <color name="material_indigo_600">#3949AB</color>
+    <color name="material_indigo_700">#303F9F</color>
+    <color name="material_indigo_800">#283593</color>
+    <color name="material_indigo_900">#1A237E</color>
+    <color name="material_indigo_A100">#8C9EFF</color>
+    <color name="material_indigo_A200">#536DFE</color>
+    <color name="material_indigo_A400">#3D5AFE</color>
+    <color name="material_indigo_A700">#304FFE</color>
+    <color name="material_indigo_translucent">#80304FFE</color>
+    <color name="material_light_blue_050">#E1F5FE</color>
+    <color name="material_light_blue_100">#B3E5FC</color>
+    <color name="material_light_blue_200">#81D4FA</color>
+    <color name="material_light_blue_300">#4FC3F7</color>
+    <color name="material_light_blue_400">#29B6F6</color>
+    <color name="material_light_blue_500">#03A9F4</color>
+    <color name="material_light_blue_600">#039BE5</color>
+    <color name="material_light_blue_700">#0288D1</color>
+    <color name="material_light_blue_800">#0277BD</color>
+    <color name="material_light_blue_900">#01579B</color>
+    <color name="material_light_blue_A100">#80D8FF</color>
+    <color name="material_light_blue_A200">#40C4FF</color>
+    <color name="material_light_blue_A400">#00B0FF</color>
+    <color name="material_light_blue_A700">#0091EA</color>
+    <color name="material_light_blue_translucent">#800091EA</color>
+    <color name="material_light_green_050">#F1F8E9</color>
+    <color name="material_light_green_100">#DCEDC8</color>
+    <color name="material_light_green_200">#C5E1A5</color>
+    <color name="material_light_green_300">#AED581</color>
+    <color name="material_light_green_400">#9CCC65</color>
+    <color name="material_light_green_500">#8BC34A</color>
+    <color name="material_light_green_600">#7CB342</color>
+    <color name="material_light_green_700">#689F38</color>
+    <color name="material_light_green_800">#558B2F</color>
+    <color name="material_light_green_900">#33691E</color>
+    <color name="material_light_green_A100">#CCFF90</color>
+    <color name="material_light_green_A200">#B2FF59</color>
+    <color name="material_light_green_A400">#76FF03</color>
+    <color name="material_light_green_A700">#64DD17</color>
+    <color name="material_light_green_translucent">#8064DD17</color>
+    <color name="material_lime_050">#F9FBE7</color>
+    <color name="material_lime_100">#F0F4C3</color>
+    <color name="material_lime_200">#E6EE9C</color>
+    <color name="material_lime_300">#DCE775</color>
+    <color name="material_lime_400">#D4E157</color>
+    <color name="material_lime_500">#CDDC39</color>
+    <color name="material_lime_600">#C0CA33</color>
+    <color name="material_lime_700">#AFB42B</color>
+    <color name="material_lime_800">#9E9D24</color>
+    <color name="material_lime_900">#827717</color>
+    <color name="material_lime_A100">#F4FF81</color>
+    <color name="material_lime_A200">#EEFF41</color>
+    <color name="material_lime_A400">#C6FF00</color>
+    <color name="material_lime_A700">#AEEA00</color>
+    <color name="material_lime_translucent">#80AEEA00</color>
+    <color name="material_orange_050">#FFF3E0</color>
+    <color name="material_orange_100">#FFE0B2</color>
+    <color name="material_orange_200">#FFCC80</color>
+    <color name="material_orange_300">#FFB74D</color>
+    <color name="material_orange_400">#FFA726</color>
+    <color name="material_orange_500">#FF9800</color>
+    <color name="material_orange_600">#FB8C00</color>
+    <color name="material_orange_700">#F57C00</color>
+    <color name="material_orange_800">#EF6C00</color>
+    <color name="material_orange_900">#E65100</color>
+    <color name="material_orange_A100">#FFD180</color>
+    <color name="material_orange_A200">#FFAB40</color>
+    <color name="material_orange_A400">#FF9100</color>
+    <color name="material_orange_A700">#FF6D00</color>
+    <color name="material_orange_translucent">#80FF6D00</color>
+    <color name="material_pink_050">#FCE4EC</color>
+    <color name="material_pink_100">#F8BBD0</color>
+    <color name="material_pink_200">#F48FB1</color>
+    <color name="material_pink_300">#F06292</color>
+    <color name="material_pink_400">#EC407A</color>
+    <color name="material_pink_500">#E91E63</color>
+    <color name="material_pink_600">#D81B60</color>
+    <color name="material_pink_700">#C2185B</color>
+    <color name="material_pink_800">#AD1457</color>
+    <color name="material_pink_900">#880E4F</color>
+    <color name="material_pink_A100">#FF80AB</color>
+    <color name="material_pink_A200">#FF4081</color>
+    <color name="material_pink_A400">#F50057</color>
+    <color name="material_pink_A700">#C51162</color>
+    <color name="material_pink_translucent">#80C51162</color>
+    <color name="material_purple_050">#F3E5F5</color>
+    <color name="material_purple_100">#E1BEE7</color>
+    <color name="material_purple_200">#CE93D8</color>
+    <color name="material_purple_300">#BA68C8</color>
+    <color name="material_purple_400">#AB47BC</color>
+    <color name="material_purple_500">#9C27B0</color>
+    <color name="material_purple_600">#8E24AA</color>
+    <color name="material_purple_700">#7B1FA2</color>
+    <color name="material_purple_800">#6A1B9A</color>
+    <color name="material_purple_900">#4A148C</color>
+    <color name="material_purple_A100">#EA80FC</color>
+    <color name="material_purple_A200">#E040FB</color>
+    <color name="material_purple_A400">#D500F9</color>
+    <color name="material_purple_A700">#AA00FF</color>
+    <color name="material_purple_translucent">#80AA00FF</color>
+    <color name="material_red_050">#FFEBEE</color>
+    <color name="material_red_100">#FFCDD2</color>
+    <color name="material_red_200">#EF9A9A</color>
+    <color name="material_red_300">#E57373</color>
+    <color name="material_red_400">#EF5350</color>
+    <color name="material_red_500">#F44336</color>
+    <color name="material_red_600">#E53935</color>
+    <color name="material_red_700">#D32F2F</color>
+    <color name="material_red_800">#C62828</color>
+    <color name="material_red_900">#B71C1C</color>
+    <color name="material_red_A100">#FF8A80</color>
+    <color name="material_red_A200">#FF5252</color>
+    <color name="material_red_A400">#FF1744</color>
+    <color name="material_red_A700">#D50000</color>
+    <color name="material_red_translucent">#80D50000</color>
+    <color name="material_teal_050">#E0F2F1</color>
+    <color name="material_teal_100">#B2DFDB</color>
+    <color name="material_teal_200">#80CBC4</color>
+    <color name="material_teal_300">#4DB6AC</color>
+    <color name="material_teal_400">#26A69A</color>
+    <color name="material_teal_500">#009688</color>
+    <color name="material_teal_600">#00897B</color>
+    <color name="material_teal_700">#00796B</color>
+    <color name="material_teal_800">#00695C</color>
+    <color name="material_teal_900">#004D40</color>
+    <color name="material_teal_A100">#A7FFEB</color>
+    <color name="material_teal_A200">#64FFDA</color>
+    <color name="material_teal_A400">#1DE9B6</color>
+    <color name="material_teal_A700">#00BFA5</color>
+    <color name="material_teal_translucent">#8000BFA5</color>
+    <color name="material_yellow_050">#FFFDE7</color>
+    <color name="material_yellow_100">#FFF9C4</color>
+    <color name="material_yellow_200">#FFF59D</color>
+    <color name="material_yellow_300">#FFF176</color>
+    <color name="material_yellow_400">#FFEE58</color>
+    <color name="material_yellow_500">#FFEB3B</color>
+    <color name="material_yellow_600">#FDD835</color>
+    <color name="material_yellow_700">#FBC02D</color>
+    <color name="material_yellow_800">#F9A825</color>
+    <color name="material_yellow_900">#F57F17</color>
+    <color name="material_yellow_A100">#FFFF8D</color>
+    <color name="material_yellow_A200">#FFFF00</color>
+    <color name="material_yellow_A400">#FFEA00</color>
+    <color name="material_yellow_A700">#FFD600</color>
+    <color name="material_yellow_translucent">#80FFD600</color>
+    <color name="semi_transparent_black">#80000000</color>
+    <color name="semi_transparent_white">#80FFFFFF</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="white">@android:color/white</color>
+    <dimen name="base_bkg_corner_radius_large">16dp</dimen>
+    <dimen name="base_bkg_corner_radius_medium">12dp</dimen>
+    <dimen name="base_bkg_corner_radius_small">8dp</dimen>
+    <dimen name="base_bkg_corner_radius_tiny">4dp</dimen>
+    <string name="about">About</string>
+    <string name="account">Account</string>
+    <string name="add">Add</string>
+    <string name="address">Address</string>
+    <string name="altitude">Altitude</string>
+    <string name="analyse">Analyse</string>
+    <string name="application">Application</string>
+    <string name="apply">Apply</string>
+    <string name="back">Back</string>
+    <string name="black">Black</string>
+    <string name="bold">Bold</string>
+    <string name="calibrate">Calibrate</string>
+    <string name="cancel">Cancel</string>
+    <string name="choose">Choose</string>
+    <string name="clear">Clear</string>
+    <string name="close">Close</string>
+    <string name="color">Color</string>
+    <string name="compass">Compass</string>
+    <string name="confirm">Confirm</string>
+    <string name="datetime">Datetime</string>
+    <string name="day">Day</string>
+    <string name="degrees">Degrees</string>
+    <string name="delete">Delete</string>
+    <string name="discard">Discard</string>
+    <string name="donate">Donate</string>
+    <string name="east">East</string>
+    <string name="edit">Edit</string>
+    <string name="email">Email</string>
+    <string name="error">Error</string>
+    <string name="failed">Failed</string>
+    <string name="fast">Fast</string>
+    <string name="fastest">Fastest</string>
+    <string name="feedback">Feedback</string>
+    <string name="female">Female</string>
+    <string name="fix">Fix</string>
+    <string name="free">Free</string>
+    <string name="green">Green</string>
+    <string name="guest">Guest</string>
+    <string name="hello">Hello</string>
+    <string name="homepage">Home</string>
+    <string name="hour">Hour</string>
+    <string name="hybrid">Hybrid</string>
+    <string name="ignore">Ignore</string>
+    <string name="information">Information</string>
+    <string name="input">Input</string>
+    <string name="install">Install</string>
+    <string name="italic">Italic</string>
+    <string name="language">Language</string>
+    <string name="latitude">Latitude</string>
+    <string name="latlng">Latlng</string>
+    <string name="light_theme_blue_gray_style">Light with Blue Gray</string>
+    <string name="light_theme_lime_style">Light with Lime</string>
+    <string name="light_theme_orange_style">Light with Orange</string>
+    <string name="light_theme_purple_style">Light with Purple</string>
+    <string name="light_theme_teal_style">Light with Teal</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="longitude">Longitude</string>
+    <string name="lookup">Look up</string>
+    <string name="lowercase">Lowercase</string>
+    <string name="lucky">Lucky</string>
+    <string name="male">Male</string>
+    <string name="map">Map</string>
+    <string name="maximum">Maximum</string>
+    <string name="menu">Menu</string>
+    <string name="message">Message</string>
+    <string name="msg_bad_request">Bad request</string>
+    <string name="msg_connect_failed">Connect failed</string>
+    <string name="msg_has_new_update">The new app version has been released. It is recommended to update to latest version for better compatibility and performance.</string>
+    <string name="msg_internal_server_error">Internal server error</string>
+    <string name="msg_not_acceptable">Not acceptable</string>
+    <string name="msg_not_found">Not found</string>
+    <string name="msg_oops">Oops! Something got wrong</string>
+    <string name="msg_tap_one_more_to_quit">Tap back one more to quit</string>
+    <string name="msg_unknown_error">Unkown error</string>
+    <string name="name">Name</string>
+    <string name="none">None</string>
+    <string name="normal">Normal</string>
+    <string name="north">North</string>
+    <string name="ok">OK</string>
+    <string name="open">Open</string>
+    <string name="others">Others</string>
+    <string name="paint">Paint</string>
+    <string name="password">Password</string>
+    <string name="picture">Picture</string>
+    <string name="pleasewait">Please wait</string>
+    <string name="point">Point</string>
+    <string name="pro">Pro</string>
+    <string name="purchase">Purchase</string>
+    <string name="red">Red</string>
+    <string name="reset">Reset</string>
+    <string name="restart">Restart</string>
+    <string name="satellite">Satellite</string>
+    <string name="save">Save</string>
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+    <string name="sex">Sex</string>
+    <string name="share">Share</string>
+    <string name="signin">Sign In</string>
+    <string name="slow">Slow</string>
+    <string name="south">South</string>
+    <string name="status">Status</string>
+    <string name="succeed">Succeed</string>
+    <string name="summary_light_theme">Light theme</string>
+    <string name="support">Support</string>
+    <string name="system">System</string>
+    <string name="terrain">Terrain</string>
+    <string name="theme">Theme</string>
+    <string name="title">Title</string>
+    <string name="tomato">Tomato</string>
+    <string name="trial">Trial</string>
+    <string name="type">Type</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="unlucky">Unlucky</string>
+    <string name="update">Update</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="upppercase">Uppercase</string>
+    <string name="username">Username</string>
+    <string name="verify">Verify</string>
+    <string name="view">View</string>
+    <string name="violet">Violet</string>
+    <string name="warning">Warning</string>
+    <string name="watch">Watch</string>
+    <string name="west">West</string>
+    <string name="white">White</string>
+    <string name="year">Year</string>
+    <string name="yellow">Yellow</string>
+    <style name="Dk.BaseTheme.Dark" parent="Theme.AppCompat.NoActionBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+		<item name="android:windowBackground">@drawable/bkg_window</item>
+		<item name="actionOverflowButtonStyle">@style/DkOverflowButtonStyle</item>
+		<item name="preferenceTheme">@style/Dk.BaseTheme.Dark.Preference</item>
+		<item name="dialogTheme">@style/Dk.DarkTheme.Dialog</item>
+		<item name="alertDialogTheme">@style/Dk.DarkTheme.Dialog.Alert</item>
+		<item name="dk_color_layout_bkg">@color/black</item>
+		<item name="dk_color_layout_bkg_opposite">@color/white</item>
+	</style>
+    <style name="Dk.BaseTheme.Dark.Preference" parent="PreferenceFragment">
+		<item name="android:background">@color/black</item>
+	</style>
+    <style name="Dk.BaseTheme.DayNight" parent="Theme.AppCompat.DayNight.NoActionBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+		<item name="android:windowBackground">@drawable/bkg_window</item>
+		<item name="actionOverflowButtonStyle">@style/DkOverflowButtonStyle</item>
+		<item name="preferenceTheme">@style/Dk.BaseTheme.DayNight.Preference</item>
+		<item name="dialogTheme">@style/Dk.LightTheme.Dialog</item>
+		<item name="alertDialogTheme">@style/Dk.LightTheme.Dialog.Alert</item>
+		<item name="dk_color_layout_bkg">@color/black</item>
+		<item name="dk_color_layout_bkg_opposite">@color/white</item>
+	</style>
+    <style name="Dk.BaseTheme.DayNight.Preference" parent="PreferenceFragment">
+		<item name="android:background">@color/white</item>
+	</style>
+    <style name="Dk.BaseTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+		<item name="android:windowBackground">@drawable/bkg_window</item>
+		<item name="actionOverflowButtonStyle">@style/DkOverflowButtonStyle</item>
+		<item name="preferenceTheme">@style/Dk.BaseTheme.Light.Preference</item>
+		<item name="dialogTheme">@style/Dk.LightTheme.Dialog</item>
+		<item name="alertDialogTheme">@style/Dk.LightTheme.Dialog.Alert</item>
+		<item name="dk_color_layout_bkg">@color/white</item>
+		<item name="dk_color_layout_bkg_opposite">@color/black</item>
+	</style>
+    <style name="Dk.BaseTheme.Light.Preference" parent="PreferenceFragment">
+		<item name="android:background">@color/white</item>
+	</style>
+    <style name="Dk.DarkTheme.BlueGray" parent="Dk.BaseTheme.Dark">
+		<item name="dk_color_translucent">@color/material_blue_gray_translucent</item>
+		<item name="dk_color_material_050">@color/material_blue_gray_050</item>
+		<item name="dk_color_material_100">@color/material_blue_gray_100</item>
+		<item name="dk_color_material_200">@color/material_blue_gray_200</item>
+		<item name="dk_color_material_300">@color/material_blue_gray_300</item>
+		<item name="dk_color_material_400">@color/material_blue_gray_400</item>
+		<item name="dk_color_material_500">@color/material_blue_gray_500</item>
+		<item name="dk_color_material_600">@color/material_blue_gray_600</item>
+		<item name="dk_color_material_700">@color/material_blue_gray_700</item>
+		<item name="dk_color_material_800">@color/material_blue_gray_800</item>
+		<item name="dk_color_material_900">@color/material_blue_gray_900</item>
+		<item name="dk_color_material_a100">@color/material_blue_gray_A100</item>
+		<item name="dk_color_material_a200">@color/material_blue_gray_A200</item>
+		<item name="dk_color_material_a400">@color/material_blue_gray_A400</item>
+		<item name="dk_color_material_a700">@color/material_blue_gray_A700</item>
+
+		<item name="colorPrimary">@color/material_blue_gray_500</item>
+		<item name="colorPrimaryDark">@color/material_blue_gray_700</item>
+		<item name="colorAccent">@color/material_blue_gray_A700</item>
+		<item name="colorControlNormal">@color/material_blue_gray_500</item>
+		<item name="colorControlActivated">@color/material_blue_gray_500</item>
+		<!--<item name="colorControlHighlight">@color/selector_blue_gray_pressed</item>-->
+
+		<item name="dialogTheme">@style/Dk.DarkTheme.Dialog.BlueGray</item>
+		<item name="alertDialogTheme">@style/Dk.DarkTheme.Dialog.Alert.BlueGray</item>
+	</style>
+    <style name="Dk.DarkTheme.Dialog" parent="Theme.AppCompat.Dialog"/>
+    <style name="Dk.DarkTheme.Dialog.Alert" parent="Theme.AppCompat.Dialog.Alert"/>
+    <style name="Dk.DarkTheme.Dialog.Alert.BlueGray">
+		<item name="colorPrimary">@color/material_blue_gray_500</item>
+		<item name="colorPrimaryDark">@color/material_blue_gray_700</item>
+		<item name="colorAccent">@color/material_blue_gray_A700</item>
+	</style>
+    <style name="Dk.DarkTheme.Dialog.BlueGray">
+		<item name="colorPrimary">@color/material_blue_gray_500</item>
+		<item name="colorPrimaryDark">@color/material_blue_gray_700</item>
+		<item name="colorAccent">@color/material_blue_gray_A700</item>
+	</style>
+    <style name="Dk.LightTheme.AppBar.Light" parent="ThemeOverlay.AppCompat.ActionBar">
+		<item name="colorControlNormal">@color/black</item>
+		<item name="android:actionMenuTextColor">@color/white</item>
+	</style>
+    <style name="Dk.LightTheme.BlueGray" parent="Dk.BaseTheme.Light">
+		<item name="dk_color_translucent">@color/material_blue_gray_translucent</item>
+		<item name="dk_color_material_050">@color/material_blue_gray_050</item>
+		<item name="dk_color_material_100">@color/material_blue_gray_100</item>
+		<item name="dk_color_material_200">@color/material_blue_gray_200</item>
+		<item name="dk_color_material_300">@color/material_blue_gray_300</item>
+		<item name="dk_color_material_400">@color/material_blue_gray_400</item>
+		<item name="dk_color_material_500">@color/material_blue_gray_500</item>
+		<item name="dk_color_material_600">@color/material_blue_gray_600</item>
+		<item name="dk_color_material_700">@color/material_blue_gray_700</item>
+		<item name="dk_color_material_800">@color/material_blue_gray_800</item>
+		<item name="dk_color_material_900">@color/material_blue_gray_900</item>
+		<item name="dk_color_material_a100">@color/material_blue_gray_A100</item>
+		<item name="dk_color_material_a200">@color/material_blue_gray_A200</item>
+		<item name="dk_color_material_a400">@color/material_blue_gray_A400</item>
+		<item name="dk_color_material_a700">@color/material_blue_gray_A700</item>
+
+		<item name="colorPrimary">@color/material_blue_gray_500</item>
+		<item name="colorPrimaryDark">@color/material_blue_gray_700</item>
+		<item name="colorAccent">@color/material_blue_gray_A700</item>
+		<item name="colorControlNormal">@color/material_blue_gray_500</item>
+		<item name="colorControlActivated">@color/material_blue_gray_500</item>
+
+		<item name="dialogTheme">@style/Dk.LightTheme.Dialog.BlueGray</item>
+		<item name="alertDialogTheme">@style/Dk.LightTheme.Dialog.Alert.BlueGray</item>
+	</style>
+    <style name="Dk.LightTheme.BlueGray.FullScreen" parent="Dk.BaseTheme.Light">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowActionBar">false</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+	</style>
+    <style name="Dk.LightTheme.Dialog" parent="Theme.AppCompat.Light.Dialog"/>
+    <style name="Dk.LightTheme.Dialog.Alert" parent="Theme.AppCompat.Light.Dialog.Alert"/>
+    <style name="Dk.LightTheme.Dialog.Alert.BlueGray">
+		<item name="colorPrimary">@color/material_blue_gray_500</item>
+		<item name="colorPrimaryDark">@color/material_blue_gray_700</item>
+		<item name="colorAccent">@color/material_blue_gray_A700</item>
+	</style>
+    <style name="Dk.LightTheme.Dialog.Alert.Lime">
+		<item name="colorPrimary">@color/material_lime_500</item>
+		<item name="colorPrimaryDark">@color/material_lime_700</item>
+		<item name="colorAccent">@color/material_lime_A700</item>
+	</style>
+    <style name="Dk.LightTheme.Dialog.Alert.Orange">
+		<item name="colorPrimary">@color/material_orange_500</item>
+		<item name="colorPrimaryDark">@color/material_orange_700</item>
+		<item name="colorAccent">@color/material_orange_A700</item>
+	</style>
+    <style name="Dk.LightTheme.Dialog.Alert.Purple">
+		<item name="colorPrimary">@color/material_purple_500</item>
+		<item name="colorPrimaryDark">@color/material_purple_700</item>
+		<item name="colorAccent">@color/material_purple_A700</item>
+	</style>
+    <style name="Dk.LightTheme.Dialog.Alert.Teal">
+		<item name="colorPrimary">@color/material_teal_500</item>
+		<item name="colorPrimaryDark">@color/material_teal_700</item>
+		<item name="colorAccent">@color/material_teal_A700</item>
+	</style>
+    <style name="Dk.LightTheme.Dialog.BlueGray">
+		<item name="colorPrimary">@color/material_blue_gray_500</item>
+		<item name="colorPrimaryDark">@color/material_blue_gray_700</item>
+		<item name="colorAccent">@color/material_blue_gray_A700</item>
+	</style>
+    <style name="Dk.LightTheme.Dialog.Lime">
+		<item name="colorPrimary">@color/material_lime_500</item>
+		<item name="colorPrimaryDark">@color/material_lime_700</item>
+		<item name="colorAccent">@color/material_lime_A700</item>
+	</style>
+    <style name="Dk.LightTheme.Dialog.Orange">
+		<item name="colorPrimary">@color/material_orange_500</item>
+		<item name="colorPrimaryDark">@color/material_orange_700</item>
+		<item name="colorAccent">@color/material_orange_A700</item>
+	</style>
+    <style name="Dk.LightTheme.Dialog.Purple">
+		<item name="colorPrimary">@color/material_purple_500</item>
+		<item name="colorPrimaryDark">@color/material_purple_700</item>
+		<item name="colorAccent">@color/material_purple_A700</item>
+	</style>
+    <style name="Dk.LightTheme.Dialog.Teal">
+		<item name="colorPrimary">@color/material_teal_500</item>
+		<item name="colorPrimaryDark">@color/material_teal_700</item>
+		<item name="colorAccent">@color/material_teal_A700</item>
+	</style>
+    <style name="Dk.LightTheme.FullScreen" parent="Dk.BaseTheme.Light">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowActionBar">false</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+	</style>
+    <style name="Dk.LightTheme.Lime" parent="Dk.BaseTheme.Light">
+		<item name="dk_color_translucent">@color/material_lime_translucent</item>
+		<item name="dk_color_material_050">@color/material_lime_050</item>
+		<item name="dk_color_material_100">@color/material_lime_100</item>
+		<item name="dk_color_material_200">@color/material_lime_200</item>
+		<item name="dk_color_material_300">@color/material_lime_300</item>
+		<item name="dk_color_material_400">@color/material_lime_400</item>
+		<item name="dk_color_material_500">@color/material_lime_500</item>
+		<item name="dk_color_material_600">@color/material_lime_600</item>
+		<item name="dk_color_material_700">@color/material_lime_700</item>
+		<item name="dk_color_material_800">@color/material_lime_800</item>
+		<item name="dk_color_material_900">@color/material_lime_900</item>
+		<item name="dk_color_material_a100">@color/material_lime_A100</item>
+		<item name="dk_color_material_a200">@color/material_lime_A200</item>
+		<item name="dk_color_material_a400">@color/material_lime_A400</item>
+		<item name="dk_color_material_a700">@color/material_lime_A700</item>
+
+		<item name="colorPrimary">@color/material_lime_500</item>
+		<item name="colorPrimaryDark">@color/material_lime_700</item>
+		<item name="colorAccent">@color/material_lime_A700</item>
+		<item name="colorControlNormal">@color/material_lime_500</item>
+		<item name="colorControlActivated">@color/material_lime_500</item>
+
+		<item name="dialogTheme">@style/Dk.LightTheme.Dialog.Lime</item>
+		<item name="alertDialogTheme">@style/Dk.LightTheme.Dialog.Alert.Lime</item>
+	</style>
+    <style name="Dk.LightTheme.Lime.FullScreen" parent="Dk.BaseTheme.Light">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowActionBar">false</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+	</style>
+    <style name="Dk.LightTheme.Orange" parent="Dk.BaseTheme.Light">
+		<item name="dk_color_translucent">@color/material_orange_translucent</item>
+		<item name="dk_color_material_050">@color/material_orange_050</item>
+		<item name="dk_color_material_100">@color/material_orange_100</item>
+		<item name="dk_color_material_200">@color/material_orange_200</item>
+		<item name="dk_color_material_300">@color/material_orange_300</item>
+		<item name="dk_color_material_400">@color/material_orange_400</item>
+		<item name="dk_color_material_500">@color/material_orange_500</item>
+		<item name="dk_color_material_600">@color/material_orange_600</item>
+		<item name="dk_color_material_700">@color/material_orange_700</item>
+		<item name="dk_color_material_800">@color/material_orange_800</item>
+		<item name="dk_color_material_900">@color/material_orange_900</item>
+		<item name="dk_color_material_a100">@color/material_orange_A100</item>
+		<item name="dk_color_material_a200">@color/material_orange_A200</item>
+		<item name="dk_color_material_a400">@color/material_orange_A400</item>
+		<item name="dk_color_material_a700">@color/material_orange_A700</item>
+
+		<item name="colorPrimary">@color/material_orange_500</item>
+		<item name="colorPrimaryDark">@color/material_orange_700</item>
+		<item name="colorAccent">@color/material_orange_A700</item>
+		<item name="colorControlNormal">@color/material_orange_500</item>
+		<item name="colorControlActivated">@color/material_orange_500</item>
+
+		<item name="dialogTheme">@style/Dk.LightTheme.Dialog.Orange</item>
+		<item name="alertDialogTheme">@style/Dk.LightTheme.Dialog.Alert.Orange</item>
+	</style>
+    <style name="Dk.LightTheme.Orange.FullScreen" parent="Dk.BaseTheme.Light">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowActionBar">false</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+	</style>
+    <style name="Dk.LightTheme.Purple" parent="Dk.BaseTheme.Light">
+		<item name="dk_color_translucent">@color/material_purple_translucent</item>
+		<item name="dk_color_material_050">@color/material_purple_050</item>
+		<item name="dk_color_material_100">@color/material_purple_100</item>
+		<item name="dk_color_material_200">@color/material_purple_200</item>
+		<item name="dk_color_material_300">@color/material_purple_300</item>
+		<item name="dk_color_material_400">@color/material_purple_400</item>
+		<item name="dk_color_material_500">@color/material_purple_500</item>
+		<item name="dk_color_material_600">@color/material_purple_600</item>
+		<item name="dk_color_material_700">@color/material_purple_700</item>
+		<item name="dk_color_material_800">@color/material_purple_800</item>
+		<item name="dk_color_material_900">@color/material_purple_900</item>
+		<item name="dk_color_material_a100">@color/material_purple_A100</item>
+		<item name="dk_color_material_a200">@color/material_purple_A200</item>
+		<item name="dk_color_material_a400">@color/material_purple_A400</item>
+		<item name="dk_color_material_a700">@color/material_purple_A700</item>
+
+		<item name="colorPrimary">@color/material_purple_500</item>
+		<item name="colorPrimaryDark">@color/material_purple_700</item>
+		<item name="colorAccent">@color/material_purple_A700</item>
+		<item name="colorControlNormal">@color/material_purple_500</item>
+		<item name="colorControlActivated">@color/material_purple_500</item>
+
+		<item name="dialogTheme">@style/Dk.LightTheme.Dialog.Purple</item>
+		<item name="alertDialogTheme">@style/Dk.LightTheme.Dialog.Alert.Purple</item>
+	</style>
+    <style name="Dk.LightTheme.Purple.FullScreen" parent="Dk.BaseTheme.Light">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowActionBar">false</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+	</style>
+    <style name="Dk.LightTheme.Teal" parent="Dk.BaseTheme.Light">
+		<item name="dk_color_translucent">@color/material_teal_translucent</item>
+		<item name="dk_color_material_050">@color/material_teal_050</item>
+		<item name="dk_color_material_100">@color/material_teal_100</item>
+		<item name="dk_color_material_200">@color/material_teal_200</item>
+		<item name="dk_color_material_300">@color/material_teal_300</item>
+		<item name="dk_color_material_400">@color/material_teal_400</item>
+		<item name="dk_color_material_500">@color/material_teal_500</item>
+		<item name="dk_color_material_600">@color/material_teal_600</item>
+		<item name="dk_color_material_700">@color/material_teal_700</item>
+		<item name="dk_color_material_800">@color/material_teal_800</item>
+		<item name="dk_color_material_900">@color/material_teal_900</item>
+		<item name="dk_color_material_a100">@color/material_teal_A100</item>
+		<item name="dk_color_material_a200">@color/material_teal_A200</item>
+		<item name="dk_color_material_a400">@color/material_teal_A400</item>
+		<item name="dk_color_material_a700">@color/material_teal_A700</item>
+
+		<item name="colorPrimary">@color/material_teal_500</item>
+		<item name="colorPrimaryDark">@color/material_teal_700</item>
+		<item name="colorAccent">@color/material_teal_A700</item>
+		<item name="colorControlNormal">@color/material_teal_500</item>
+		<item name="colorControlActivated">@color/material_teal_500</item>
+
+		<item name="dialogTheme">@style/Dk.LightTheme.Dialog.Teal</item>
+		<item name="alertDialogTheme">@style/Dk.LightTheme.Dialog.Alert.Teal</item>
+	</style>
+    <style name="Dk.LightTheme.Teal.FullScreen" parent="Dk.BaseTheme.Light">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowActionBar">false</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+	</style>
+    <style name="DkOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+		<item name="android:tint">@color/white</item>
+	</style>
+    <declare-styleable name="DKAttrs">
+		<!--color-->
+		<attr format="color" name="dk_color_layout_bkg"/>
+		<attr format="color" name="dk_color_layout_bkg_opposite"/>
+		<attr format="color" name="dk_color_popup_theme"/>
+		<attr format="color" name="dk_color_translucent"/>
+		<attr format="color" name="dk_color_material_050"/>
+		<attr format="color" name="dk_color_material_100"/>
+		<attr format="color" name="dk_color_material_200"/>
+		<attr format="color" name="dk_color_material_300"/>
+		<attr format="color" name="dk_color_material_400"/>
+		<attr format="color" name="dk_color_material_500"/>
+		<attr format="color" name="dk_color_material_600"/>
+		<attr format="color" name="dk_color_material_700"/>
+		<attr format="color" name="dk_color_material_800"/>
+		<attr format="color" name="dk_color_material_900"/>
+		<attr format="color" name="dk_color_material_a100"/>
+		<attr format="color" name="dk_color_material_a200"/>
+		<attr format="color" name="dk_color_material_a400"/>
+		<attr format="color" name="dk_color_material_a700"/>
+
+		<!--menu sync with preference-->
+		<attr format="integer" name="dk_preference_key"/>
+		<attr format="string" name="dk_preference_tag_value"/>
+		<attr format="integer" name="dk_icon_status"/>
+		<attr format="integer" name="dk_submenu"/>
+
+		<!--foreground view-->
+		<attr format="string" name="dk_animation"/>
+		<attr format="color" name="dk_normal_color"/>
+		<attr format="color" name="dk_pressed_color"/>
+		<attr format="dimension" name="dk_corner_radius"/>
+		<attr format="dimension" name="dk_left_top_corner_radius"/>
+		<attr format="dimension" name="dk_right_top_corner_radius"/>
+		<attr format="dimension" name="dk_right_bottom_corner_radius"/>
+		<attr format="dimension" name="dk_left_bottom_corner_radius"/>
+	</declare-styleable>
+    <declare-styleable name="DKForegroundView">
+		<attr name="dk_animation"/>
+		<attr name="dk_normal_color"/>
+		<attr name="dk_pressed_color"/>
+		<attr name="dk_corner_radius"/>
+		<attr name="dk_left_top_corner_radius"/>
+		<attr name="dk_right_top_corner_radius"/>
+		<attr name="dk_right_bottom_corner_radius"/>
+		<attr name="dk_left_bottom_corner_radius"/>
+	</declare-styleable>
+    <declare-styleable name="DkLayerDrawable">
+		<attr name="android:visible"/>
+		<!-- Indicates the opacity of the layer. This can be useful to allow the system to enable drawing optimizations. The default value is translucent. -->
+		<attr name="android:opacity"/>
+		<!-- Indicates if the drawable needs to be mirrored when its layout direction is RTL. -->
+		<attr name="android:autoMirrored"/>
+		<!-- Indicates how layer padding should affect the bounds of subsequent layers.
+		The default padding mode value is nest. -->
+		<attr name="android:paddingMode"/>
+	</declare-styleable>
+    <declare-styleable name="DkMenuView">
+		<attr name="dk_preference_key"/>
+		<attr name="dk_preference_tag_value"/>
+		<attr name="dk_icon_status"/>
+		<attr name="dk_submenu"/>
+	</declare-styleable>
+    <declare-styleable name="DkRippleDrawable">
+		<!-- The color to use for ripple effects. This attribute is required. -->
+		<attr name="android:color"/>
+	</declare-styleable>
+    <declare-styleable name="LayerDrawableItem">
+		<attr name="android:id"/>
+		<attr name="android:left"/>
+		<attr name="android:top"/>
+		<attr name="android:right"/>
+		<attr name="android:bottom"/>
+		<attr name="android:drawable"/>
+	</declare-styleable>
+</resources>

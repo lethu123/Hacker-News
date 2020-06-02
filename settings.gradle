@@ -1,0 +1,4 @@
+rootProject.name='appNews'
+include ':core'
+include ':appbundle'
+include ':app'

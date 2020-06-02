@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_hot"
+        android:icon="@drawable/ic_trending_up_black_24dp"
+        android:title="@string/title_hot" />
+
+    <item
+        android:id="@+id/navigation_edu"
+        android:icon="@drawable/ic_new_releases_black_24dp"
+        android:title="@string/title_graduate" />
+
+    <item
+        android:id="@+id/navigation_entertaiment"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:title="@string/title_entertaiment" />
+
+
+</menu>
