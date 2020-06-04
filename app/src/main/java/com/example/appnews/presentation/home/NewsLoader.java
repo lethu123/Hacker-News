@@ -21,7 +21,7 @@ public class NewsLoader extends AsyncTask<String, NewModel, NewModel> {
 
     DkCallback dkCallback;
     final String id = "";
-    final ArrayList<String> listIds = new ArrayList<>();
+    ArrayList<String> listIds = new ArrayList<>();
 
     public NewsLoader(HomeFragment callback, DkCallback dkCallback) {
         this.callback = callback;
@@ -30,11 +30,10 @@ public class NewsLoader extends AsyncTask<String, NewModel, NewModel> {
 
     @Override
     protected NewModel doInBackground(String... string) {
-        loadNews(); // list ID of item
+        listIds = loadNews(); // list ID of item
         for (String articleId : listIds) {
             model = loadItem(articleId);
             publishProgress(model); // item
-           // return model; //item
         }
         return null;
     }
@@ -62,13 +61,13 @@ public class NewsLoader extends AsyncTask<String, NewModel, NewModel> {
 
             if (articleIds != null) {
                 for (String articleId : articleIds) {
-                    listIds.add(articleId);
-                    if (listIds.size() > 10) {
+                    newModels.add(articleId);
+                    if (newModels.size() > 10) {
                         break;
                     }
                 }
             }
-            return listIds;
+            return newModels;
         } catch (Exception ex) {
             ex.printStackTrace();
             return new ArrayList<>();
