@@ -17,11 +17,9 @@ import static tool.compet.core.BuildConfig.DEBUG;
 
 public class NewsLoader extends AsyncTask<String, NewModel, NewModel> {
     private final HomeFragment callback;
-    NewModel model;
+
 
     DkCallback dkCallback;
-    final String id = "";
-    ArrayList<String> listIds = new ArrayList<>();
 
     public NewsLoader(HomeFragment callback, DkCallback dkCallback) {
         this.callback = callback;
@@ -30,7 +28,9 @@ public class NewsLoader extends AsyncTask<String, NewModel, NewModel> {
 
     @Override
     protected NewModel doInBackground(String... string) {
+        ArrayList<String> listIds = new ArrayList<>();
         listIds = loadNews(); // list ID of item
+        NewModel model = new NewModel();
         for (String articleId : listIds) {
             model = loadItem(articleId);
             publishProgress(model); // item
