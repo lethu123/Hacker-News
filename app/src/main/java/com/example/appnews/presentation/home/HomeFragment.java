@@ -8,14 +8,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.appnews.constants.Constants;
 import com.example.appnews.R;
-import com.example.appnews.event.AsyncResponse;
 import com.example.appnews.event.ItemStoryEvent;
 import com.example.appnews.persistence.NewsDB;
 import com.example.appnews.presentation.AppFragment;
@@ -29,13 +26,14 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import tool.compet.appbundle.binder.annotation.DkBindView;
+import tool.compet.core.type.DkCallback;
 import tool.compet.core.util.DkLogs;
 
 /**
  * A simple {@link Fragment} subclass.
  * implements ItemStoryEvent
  */
-public class HomeFragment extends AppFragment implements ItemStoryEvent {
+public class HomeFragment extends AppFragment implements ItemStoryEvent, DkCallback<NewModel> {
     @DkBindView(R.id.list)
     RecyclerView recyclerView;
 
@@ -44,6 +42,8 @@ public class HomeFragment extends AppFragment implements ItemStoryEvent {
     private ArrayList<NewModel> news = new ArrayList<>();
 
     NewsDB newsDB;
+    NewModel model;
+    DkCallback<NewModel> dkCallback;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -53,6 +53,7 @@ public class HomeFragment extends AppFragment implements ItemStoryEvent {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         newsDB = new NewsDB(getActivity());
+        dkCallback = this;
     }
 
     @Override
@@ -69,10 +70,6 @@ public class HomeFragment extends AppFragment implements ItemStoryEvent {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // process here
-        // library da binding tat ca view o super roi nha
-        // tai day ko can bind lai dau
-
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager layoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
@@ -84,21 +81,19 @@ public class HomeFragment extends AppFragment implements ItemStoryEvent {
     }
 
     private void loadNewsAync() {
-        NewsLoader loader = new NewsLoader(this);
+        NewsLoader loader = new NewsLoader(this, dkCallback);
         loader.execute();
     }
 
     void onLoadArticleIdResult(ArrayList<NewModel> newModels) {
         DkLogs.debug(this, "loaded %d news", newModels.size());
-        news.clear();
+//        news.clear();
 
-        news.addAll(newModels);
-        customAdapter.notifyDataSetChanged();
+//        news.addAll(newModels);
+//        customAdapter.notifyDataSetChanged();
     }
 
     public void onItemClick(int bindingAdapterPosition) {
-        Toast.makeText(host, "bindingAdapterPosition: " + bindingAdapterPosition, Toast.LENGTH_SHORT).show();
-
         NewDetailFragment f = new NewDetailFragment();
         f.url = news.get(bindingAdapterPosition).url;
 
@@ -107,12 +102,6 @@ public class HomeFragment extends AppFragment implements ItemStoryEvent {
                 .add(f)
                 .commit();
     }
-
-//    @Override
-//    public void processFinish(NewModel model) {
-//        // add to DB
-//        newsDB.addItem(model, 1);
-//    }
 
     @Override
     public void itemClick(int id, int type) {
@@ -124,8 +113,11 @@ public class HomeFragment extends AppFragment implements ItemStoryEvent {
                 assert response.body() != null;
                 Long result = newsDB.addItem(response.body(), type);
                 if (result != -1) {
-                    Toast.makeText(getContext(), "Them thanh cong", Toast.LENGTH_LONG).show();
-                } else Toast.makeText(getContext(), "Them that bai", Toast.LENGTH_LONG).show();
+                    if(type == 1) {
+                        Toast.makeText(getContext(), "Đã thêm vào lịch sử", Toast.LENGTH_LONG).show();
+                    } else Toast.makeText(getContext(), "Bookmark thành công", Toast.LENGTH_LONG).show();
+
+                } else  Toast.makeText(getContext(), "Đã tồn tại", Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -134,4 +126,12 @@ public class HomeFragment extends AppFragment implements ItemStoryEvent {
             }
         });
     }
+
+    @Override
+    public void call(NewModel model) {
+//        this.model = model;
+       // news.clear();
+        news.add(model);
+        customAdapter.notifyDataSetChanged();
+    };
 }

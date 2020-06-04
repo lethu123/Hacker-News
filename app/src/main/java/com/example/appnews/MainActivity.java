@@ -24,11 +24,15 @@ import tool.compet.appbundle.binder.DkBinder;
 import tool.compet.appbundle.binder.annotation.DkBindView;
 
 public class MainActivity extends DkSimpleActivity {
-    @DkBindView(R.id.navigation) BottomNavigationView actionBar;
-    @DkBindView(R.id.toolbar) Toolbar toolbar;
+    @DkBindView(R.id.navigation)
+    BottomNavigationView actionBar;
+    @DkBindView(R.id.toolbar)
+    Toolbar toolbar;
     //@DkBindView(R.id.viewpager) ViewPager viewpager;
 
     //FragmentPagerAdapter adapterViewPager;
+    DkFragment fragment = null;
+    private boolean isShowHome = true;
     private Stack<Fragment> stack;
 
     @Override
@@ -50,26 +54,29 @@ public class MainActivity extends DkSimpleActivity {
         // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         actionBar.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         actionBar.setSelectedItemId(R.id.navigation_hot);
+
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            DkFragment fragment = null;
-
             switch (item.getItemId()) {
                 case R.id.navigation_hot:
+                    isShowHome = false;
                     toolbar.setTitle("Top Stories");
                     //viewpager.setCurrentItem(0);
                     fragment = new HomeFragment();
                     break;
                 case R.id.navigation_edu:
+                    isShowHome = false;
                     toolbar.setTitle("History");
                     //viewpager.setCurrentItem(1);
                     fragment = new HistoryFragment();
                     break;
                 case R.id.navigation_entertaiment:
+                    isShowHome = false;
                     toolbar.setTitle("Favourite");
                     //viewpager.setCurrentItem(2);
                     fragment = new FavouriteFragment();
@@ -85,9 +92,18 @@ public class MainActivity extends DkSimpleActivity {
 
     @Override
     public void onBackPressed() {
+
         if (!getChildNavigator().onBackPressed()) {
             super.onBackPressed();
+            isShowHome = true;
         }
+        if (fragment != null && !isShowHome) {
+            ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+            ((MainActivity) getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(false);
+        }
+        if (fragment.getClass().equals(HomeFragment.class)) toolbar.setTitle("Top Stories");
+        else if (fragment.getClass().equals(HistoryFragment.class)) toolbar.setTitle("History");
+        else if (fragment.getClass().equals(FavouriteFragment.class)) toolbar.setTitle("Favourite");
     }
 
     private boolean loadFragment(DkFragment fragment) {
@@ -134,7 +150,7 @@ public class MainActivity extends DkSimpleActivity {
                 case 0: // Fragment # 0 - This will show FirstFragment
                     return new HomeFragment();
                 case 1: // Fragment # 0 - This will show FirstFragment different title
-                    return new  HistoryFragment();
+                    return new HistoryFragment();
                 default:
                     return new FavouriteFragment();
             }

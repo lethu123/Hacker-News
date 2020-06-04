@@ -36,7 +36,7 @@ public class NewsDB {
         String query = "select * from News where idNews=" + id + " and category=" + type + " limit 1";
         Cursor cursor = null;
         cursor = database.rawQuery(query, null);
-        if(cursor != null) {
+        if(cursor.getCount()>0) {
             return true;
         } else {
             return false;
@@ -44,8 +44,8 @@ public class NewsDB {
     }
     // 1.history  2.bookmark
     public long addItem(NewModel newModel, int type) {
-        Boolean check = checkID(newModel.getId(), type);
-        if(check != false) {
+        Boolean checkExist = checkID(newModel.getId(), type);
+        if(checkExist ==false) {
             // check dupplicate false (error)
             ContentValues values = new ContentValues();
 

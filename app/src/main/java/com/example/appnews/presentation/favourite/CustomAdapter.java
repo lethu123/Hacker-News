@@ -53,7 +53,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         holder.txtTitle.setText(newModel.title);
         holder.txtCategory.setText(newModel.type);
         holder.txtDay.setText(DkDateTimes.formatTime(newModel.time));
-
+        holder.txtBy.setText("By: " + newModel.by);
         try {
             String urlAddress = newModel.url;
             URL url = new URL(urlAddress);
@@ -70,7 +70,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txtTitle, txtCategory, txtDay, txtUrl;
+        TextView txtTitle, txtCategory, txtDay, txtUrl, txtBy;
         ImageButton imageButton;
 
         public ViewHolder(@NonNull View itemView) {
@@ -79,6 +79,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             txtCategory = itemView.findViewById(R.id.txtCategoryF);
             txtDay = itemView.findViewById(R.id.txtDayF);
             txtUrl = itemView.findViewById(R.id.txtUrlF);
+            txtBy = itemView.findViewById(R.id.txtByF);
             imageButton = itemView.findViewById(R.id.remove_bookmark);
 
             itemView.setOnClickListener(v -> {

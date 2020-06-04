@@ -8,20 +8,15 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.appnews.R;
-import com.example.appnews.event.AsyncResponse;
 import com.example.appnews.event.ItemStoryEvent;
-import com.example.appnews.persistence.LoaderAPI;
 import com.example.appnews.persistence.NewsDB;
 import com.squareup.picasso.Picasso;
-
-import org.json.JSONException;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -64,6 +59,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         NewModel newModel = news.get(position);
         holder.txtTitle.setText(newModel.title);
         holder.txtCategory.setText(newModel.type);
+        holder.txtBy.setText("By: " + newModel.by);
         holder.txtDay.setText(DkDateTimes.formatTime(newModel.time));
 
         try {
@@ -88,7 +84,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txtTitle, txtCategory, txtDay, txtUrl;
+        TextView txtTitle, txtCategory, txtDay, txtUrl, txtBy;
         ImageView imageView;
         ImageButton imageButton;
         NewModel model = new NewModel();
@@ -100,6 +96,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             txtDay = itemView.findViewById(R.id.txtDay);
             imageView = itemView.findViewById(R.id.imageItem);
             txtUrl = itemView.findViewById(R.id.txtUrl);
+            txtBy = itemView.findViewById(R.id.txtBy);
             imageButton = itemView.findViewById(R.id.bookmark);
 
             itemView.setOnClickListener(v -> {
@@ -127,7 +124,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 // add bookmark here
-                // get item -> add to databse local
                 event.itemClick(idItem, 2);
                 return true;
             }

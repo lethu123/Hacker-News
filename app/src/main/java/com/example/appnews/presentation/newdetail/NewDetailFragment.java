@@ -1,12 +1,16 @@
 package com.example.appnews.presentation.newdetail;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.Toolbar;
 
+import com.example.appnews.MainActivity;
 import com.example.appnews.R;
 import com.example.appnews.presentation.AppFragment;
 
@@ -34,7 +38,11 @@ public class NewDetailFragment extends AppFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
+        toolbar.setTitle("Story Detail");
+        ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ((MainActivity) getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
         webView.loadUrl(url);
     }
+
 }

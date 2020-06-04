@@ -14,6 +14,7 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.appnews.R;
+import com.example.appnews.persistence.NewsDB;
 import com.example.appnews.presentation.home.NewModel;
 
 import java.net.URL;
@@ -26,6 +27,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     Context context;
     int layoutID;
     ArrayList<NewModel> news;
+    int idItem;
+    NewsDB newsDB;
 
     public CustomAdapter(HistoryFragment historyFragment, Context context, ArrayList<NewModel> news, int layoutID) {
         this.historyFragment = historyFragment;
@@ -49,7 +52,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         holder.txtTitle.setText(newModel.title);
         holder.txtCategory.setText(newModel.type);
         holder.txtDay.setText(DkDateTimes.formatTime(newModel.time));
-
+        holder.txtBy.setText("By: " + newModel.by);
         try {
             String urlAddress = newModel.url;
             URL url = new URL(urlAddress);
@@ -66,7 +69,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txtTitle, txtCategory, txtDay, txtUrl;
+        TextView txtTitle, txtCategory, txtDay, txtUrl, txtBy;
         ImageButton imageButton;
 
         public ViewHolder(@NonNull View itemView) {
@@ -75,9 +78,23 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             txtCategory = itemView.findViewById(R.id.txtCategoryH);
             txtDay = itemView.findViewById(R.id.txtDayH);
             txtUrl = itemView.findViewById(R.id.txtUrlH);
+            txtBy = itemView.findViewById(R.id.txtByH);
+            imageButton = itemView.findViewById(R.id.remove_history);
 
             itemView.setOnClickListener(v -> {
                  historyFragment.onItemClick(getBindingAdapterPosition());
+            });
+
+            imageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // delete from DB
+                    idItem = news.get(getAbsoluteAdapterPosition()).getId();
+                    newsDB = new NewsDB(context);
+                    newsDB.deleteItem(idItem, 1);
+                    news.remove(getLayoutPosition());
+                    notifyDataSetChanged();
+                }
             });
 
         }
