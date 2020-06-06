@@ -1,11 +1,14 @@
 package com.example.appnews.presentation.favourite;
 
+import android.content.AsyncQueryHandler;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,16 +23,19 @@ import com.example.appnews.presentation.home.NewModel;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 import tool.compet.core.datetime.DkDateTimes;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
+public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> implements Filterable {
     private final FavouriteFragment favouriteFragment;
     Context context;
     int layoutID;
-    static  ArrayList<NewModel> news;
+    static ArrayList<NewModel> news;
     int idItem;
     NewsDB newsDB;
+    ArrayList<NewModel> origin = new ArrayList<>();
 
     public CustomAdapter(FavouriteFragment favouriteFragment, Context context, ArrayList<NewModel> news, int layoutID) {
         this.favouriteFragment = favouriteFragment;
@@ -69,6 +75,41 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         return news.size();
     }
 
+    @Override
+    public Filter getFilter() {
+        return filter;
+    }
+
+    Filter filter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<NewModel> filterList = new ArrayList<>();
+            if (origin.size() == 0) {
+                origin.addAll(news);
+            }
+            if (constraint.toString().isEmpty()) {
+                filterList.addAll(origin);
+            } else {
+                for (NewModel model : origin) {
+                    if (model.title.toLowerCase().contains(constraint.toString().toLowerCase())) {
+                        filterList.add(model);
+                    }
+                }
+            }
+
+            FilterResults filterResults = new FilterResults();
+            filterResults.values = filterList;
+            return filterResults;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            news.clear();
+            news.addAll((Collection<? extends NewModel>) results.values);
+            notifyDataSetChanged();
+        }
+    };
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView txtTitle, txtCategory, txtDay, txtUrl, txtBy;
         ImageButton imageButton;
@@ -83,7 +124,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             imageButton = itemView.findViewById(R.id.remove_bookmark);
 
             itemView.setOnClickListener(v -> {
-               favouriteFragment.onItemClick(getBindingAdapterPosition());
+                favouriteFragment.onItemClick(getBindingAdapterPosition());
             });
 
             imageButton.setOnClickListener(new View.OnClickListener() {

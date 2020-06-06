@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,10 +22,12 @@ import com.squareup.picasso.Picasso;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 import tool.compet.core.datetime.DkDateTimes;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
+public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> implements Filterable {
     private final HomeFragment homeFragment;
 
     Context context;
@@ -32,6 +36,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     String logos[];
     NewsDB newsDB;
     int idItem;
+    ArrayList<NewModel> origin = new ArrayList<>();
 
     ItemStoryEvent event;
 //    AsyncResponse event;
@@ -82,6 +87,40 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         return news.size();
     }
 
+    @Override
+    public Filter getFilter() {
+        return filter;
+    }
+
+    Filter filter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<NewModel> filterList = new ArrayList<>();
+            if (origin.size() == 0) {
+                origin.addAll(news);
+            }
+            if (constraint.toString().isEmpty()) {
+                filterList.addAll(origin);
+            } else {
+                for (NewModel model : origin) {
+                    if (model.title.toLowerCase().contains(constraint.toString().toLowerCase())) {
+                        filterList.add(model);
+                    }
+                }
+            }
+
+            FilterResults filterResults = new FilterResults();
+            filterResults.values = filterList;
+            return filterResults;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            news.clear();
+            news.addAll((Collection<? extends NewModel>) results.values);
+            notifyDataSetChanged();
+        }
+    };
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView txtTitle, txtCategory, txtDay, txtUrl, txtBy;

@@ -21,12 +21,12 @@
 21
 22    <uses-sdk
 23        android:minSdkVersion="14"
-23-->E:\STUDY\LAPTRINHDIDONG\projects\appNews\core\src\main\AndroidManifest.xml
+23-->D:\STUDY\LAPTRINHDIDONG\Hacker-News\core\src\main\AndroidManifest.xml
 24        android:targetSdkVersion="29" />
-24-->E:\STUDY\LAPTRINHDIDONG\projects\appNews\core\src\main\AndroidManifest.xml
+24-->D:\STUDY\LAPTRINHDIDONG\Hacker-News\core\src\main\AndroidManifest.xml
 25
 26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-26-->E:\STUDY\LAPTRINHDIDONG\projects\appNews\core\src\main\AndroidManifest.xml:20:2-76
-26-->E:\STUDY\LAPTRINHDIDONG\projects\appNews\core\src\main\AndroidManifest.xml:20:19-73
+26-->D:\STUDY\LAPTRINHDIDONG\Hacker-News\core\src\main\AndroidManifest.xml:20:2-76
+26-->D:\STUDY\LAPTRINHDIDONG\Hacker-News\core\src\main\AndroidManifest.xml:20:19-73
 27
 28</manifest>

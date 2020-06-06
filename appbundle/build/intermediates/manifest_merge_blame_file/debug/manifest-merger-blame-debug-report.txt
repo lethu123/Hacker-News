@@ -6,8 +6,8 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="14"
-8-->E:\STUDY\LAPTRINHDIDONG\projects\appNews\appbundle\src\main\AndroidManifest.xml
+8-->D:\STUDY\LAPTRINHDIDONG\Hacker-News\appbundle\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->E:\STUDY\LAPTRINHDIDONG\projects\appNews\appbundle\src\main\AndroidManifest.xml
+9-->D:\STUDY\LAPTRINHDIDONG\Hacker-News\appbundle\src\main\AndroidManifest.xml
 10
 11</manifest>
